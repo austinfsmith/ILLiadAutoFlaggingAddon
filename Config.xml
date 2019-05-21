@@ -1,0 +1,26 @@
+<Configuration>
+  <Name>Autoflagger Addon</Name>
+  <Author>Austin Smith, University of Maryland Libraries</Author>
+  <Version>1.2.2</Version>
+  <Active>true</Active>
+  <Type>Server</Type>
+  <Description>Identifies requests which have not been updated recently, and flags them for staff attention</Description>
+  <Settings>
+    <Setting name="WatchQueues" value="" type="string">
+	     <Description>Comma-separated list of the queues to monitor.</Description>
+	    </Setting>
+    <Setting name="RequestTypes" value="" type="string">
+      <Description>Comma-separated list of request types to monitor (must be A, L, or B, for article, loan, or both)</Description>
+    </Setting>
+    <Setting name="DaysToWait" value="" type="string">
+      <Description>Comma-separated list of the number of days to wait before flagging a request. Must correspond to the list of queues.</Description>
+    </Setting>
+	<Setting name="WatchFlags" value="" type="string">
+	  <Description>Comma-separated list of the flags to add. Must correspond to the list of queues. Must already be defined in the Customization Manager.</Description>
+	</Setting>
+  </Settings>
+  <Forms />
+  <Files>
+    <File>Autoflagger.lua</File>
+  </Files>
+</Configuration>
